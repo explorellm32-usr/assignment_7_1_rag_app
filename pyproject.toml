@@ -13,6 +13,8 @@ dependencies = [
     "pydantic>=2.13.4",
     "faiss-cpu>=1.8.0",
     "numpy>=1.26",
+    "fastapi>=0.136.3",
+    "uvicorn>=0.48.0",
 ]
 
 [dependency-groups]
@@ -28,3 +30,6 @@ markers = [
     "network: test requires internet access",
     "embed: test requires the embedding endpoint (gateway V7)",
 ]
+
+[tool.setuptools.packages.find]
+exclude = ["sandbox*", "state*"]
