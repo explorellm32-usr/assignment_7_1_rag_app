@@ -1,0 +1,184 @@
+QUERY: Compare how the ReAct methodology and standard Prompt Engineering instruct the model differently when handling complex tasks.
+
+[05/30/26 12:31:35] INFO     Processing request of type            server.py:727
+                             ListToolsRequest                                   
+[05/30/26 12:32:10] INFO     Processing request of type            server.py:727
+                             CallToolRequest                                    
+                    INFO     HTTP Request: GET                   _client.py:1025
+                             http://localhost:8107/v1/routers                   
+                             "HTTP/1.1 200 OK"                                  
+[05/30/26 12:32:12] INFO     HTTP Request: POST                  _client.py:1025
+                             http://localhost:8107/v1/embed                     
+                             "HTTP/1.1 200 OK"                                  
+[05/30/26 12:32:38] INFO     Processing request of type            server.py:727
+                             CallToolRequest                                    
+                    INFO     HTTP Request: GET                   _client.py:1025
+                             http://localhost:8107/v1/routers                   
+                             "HTTP/1.1 200 OK"                                  
+[05/30/26 12:32:39] INFO     HTTP Request: POST                  _client.py:1025
+                             http://localhost:8107/v1/embed                     
+                             "HTTP/1.1 200 OK"                                  
+[05/30/26 12:33:04] INFO     Processing request of type            server.py:727
+                             CallToolRequest                                    
+[05/30/26 12:33:05] INFO     HTTP Request: GET                   _client.py:1025
+                             http://localhost:8107/v1/routers                   
+                             "HTTP/1.1 200 OK"                                  
+[05/30/26 12:33:07] INFO     HTTP Request: POST                  _client.py:1025
+                             http://localhost:8107/v1/embed                     
+                             "HTTP/1.1 200 OK"                                  
+[05/30/26 12:33:34] INFO     Processing request of type            server.py:727
+                             CallToolRequest                                    
+[05/30/26 12:33:35] INFO     HTTP Request: GET                   _client.py:1025
+                             http://localhost:8107/v1/routers                   
+                             "HTTP/1.1 200 OK"                                  
+[05/30/26 12:33:37] INFO     HTTP Request: POST                  _client.py:1025
+                             http://localhost:8107/v1/embed                     
+                             "HTTP/1.1 200 OK"                                  
+[05/30/26 12:34:05] INFO     Processing request of type            server.py:727
+                             CallToolRequest                                    
+                    INFO     HTTP Request: GET                   _client.py:1025
+                             http://localhost:8107/v1/routers                   
+                             "HTTP/1.1 200 OK"                                  
+[05/30/26 12:34:06] INFO     HTTP Request: POST                  _client.py:1025
+                             http://localhost:8107/v1/embed                     
+                             "HTTP/1.1 200 OK"                                  
+[05/30/26 12:34:31] INFO     Processing request of type            server.py:727
+                             CallToolRequest                                    
+                    INFO     HTTP Request: GET                   _client.py:1025
+                             http://localhost:8107/v1/routers                   
+                             "HTTP/1.1 200 OK"                                  
+[05/30/26 12:34:32] INFO     HTTP Request: POST                  _client.py:1025
+                             http://localhost:8107/v1/embed                     
+                             "HTTP/1.1 200 OK"                                  
+[05/30/26 12:34:57] INFO     Processing request of type            server.py:727
+                             CallToolRequest                                    
+                    INFO     HTTP Request: GET                   _client.py:1025
+                             http://localhost:8107/v1/routers                   
+                             "HTTP/1.1 200 OK"                                  
+[05/30/26 12:34:58] INFO     HTTP Request: POST                  _client.py:1025
+                             http://localhost:8107/v1/embed                     
+                             "HTTP/1.1 200 OK"                                  
+[05/30/26 12:35:27] INFO     Processing request of type            server.py:727
+                             CallToolRequest                                    
+                    INFO     HTTP Request: GET                   _client.py:1025
+                             http://localhost:8107/v1/routers                   
+                             "HTTP/1.1 200 OK"                                  
+[05/30/26 12:35:29] INFO     HTTP Request: POST                  _client.py:1025
+                             http://localhost:8107/v1/embed                     
+                             "HTTP/1.1 200 OK"                                  
+[05/30/26 12:35:57] INFO     Processing request of type            server.py:727
+                             CallToolRequest                                    
+                    INFO     HTTP Request: GET                   _client.py:1025
+                             http://localhost:8107/v1/routers                   
+                             "HTTP/1.1 200 OK"                                  
+[05/30/26 12:35:59] INFO     HTTP Request: POST                  _client.py:1025
+                             http://localhost:8107/v1/embed                     
+                             "HTTP/1.1 200 OK"                                  
+[05/30/26 12:36:27] INFO     Processing request of type            server.py:727
+                             CallToolRequest                                    
+                    INFO     HTTP Request: GET                   _client.py:1025
+                             http://localhost:8107/v1/routers                   
+                             "HTTP/1.1 200 OK"                                  
+[05/30/26 12:36:29] INFO     HTTP Request: POST                  _client.py:1025
+                             http://localhost:8107/v1/embed                     
+                             "HTTP/1.1 200 OK"                                  
+
+══════════════════════════════════════════════════════════════════════════════
+run 6b78af15  ─  query: Compare how the ReAct methodology and standard Prompt Engineering instruct the model differently when handling complex tasks.
+══════════════════════════════════════════════════════════════════════════════
+[mcp] loaded 11 tools: ['web_search', 'fetch_url', 'get_time', 'currency_convert', 'read_file', 'list_dir', 'create_file', 'update_file', 'edit_file', 'index_document', 'search_knowledge']
+
+─── iter 1 ─────────────────────────────────────────────
+[memory.read]   8 hits
+[perception]    ○ g:5a23e586 — Query the knowledge base for instructions on ReAct methodology vs standard Prompt Engineering
+[perception]    ○ g:a5a7cc8f — Compare and summarise the differences in how they instruct models for complex tasks
+[decision]      TOOL_CALL: search_knowledge({"k": "5", "query": "ReAct methodology vs standard Prompt Engineering"})
+[action]        → 
+
+─── iter 2 ─────────────────────────────────────────────
+[memory.read]   8 hits
+[perception]    ✓ g:5a23e586 — Query the knowledge base for instructions on ReAct methodology vs standard Prompt Engineering
+[perception]    ○ g:a5a7cc8f — Compare and summarise the differences in how they instruct models for complex tasks
+[decision]      TOOL_CALL: search_knowledge({"k": "5", "query": "How ReAct methodology instructs models for complex tasks differs from standard Prompt Engineering"})
+[action]        → {   "id": "mem:9d68bf63",   "descriptor": "Technique for breaking down complex logic into step-by-step derivations in AI models",   "source": "user_query",   "chunk_preview": "",   "metadata": {     "...
+
+─── iter 3 ─────────────────────────────────────────────
+[memory.read]   8 hits
+[perception]    ✓ g:5a23e586 — Query the knowledge base for instructions on ReAct methodology vs standard Prompt Engineering
+[perception]    ○ g:a5a7cc8f — Compare and summarise the differences in how they instruct models for complex tasks
+[decision]      TOOL_CALL: search_knowledge({"k": "5", "query": "How ReAct methodology instructs models for complex tasks differs from standard Prompt Engineering"})
+[action]        → {   "id": "mem:9d68bf63",   "descriptor": "Technique for breaking down complex logic into step-by-step derivations in AI models",   "source": "user_query",   "chunk_preview": "",   "metadata": {     "...
+
+─── iter 4 ─────────────────────────────────────────────
+[memory.read]   8 hits
+[perception]    ✓ g:5a23e586 — Query the knowledge base for instructions on ReAct methodology vs standard Prompt Engineering
+[perception]    ○ g:a5a7cc8f — Compare and summarise the differences in how they instruct models for complex tasks
+[decision]      TOOL_CALL: search_knowledge({"k": "5", "query": "How ReAct methodology instructs models for complex tasks differs from standard Prompt Engineering"})
+[action]        → {   "id": "mem:9d68bf63",   "descriptor": "Technique for breaking down complex logic into step-by-step derivations in AI models",   "source": "user_query",   "chunk_preview": "",   "metadata": {     "...
+
+─── iter 5 ─────────────────────────────────────────────
+[memory.read]   8 hits
+[perception]    ✓ g:5a23e586 — Query the knowledge base for instructions on ReAct methodology vs standard Prompt Engineering
+[perception]    ○ g:a5a7cc8f — Compare and summarise the differences in how they instruct models for complex tasks
+[decision]      TOOL_CALL: search_knowledge({"k": "5", "query": "How ReAct methodology instructs models for complex tasks differs from standard Prompt Engineering i)
+[action]        → {   "id": "mem:9d68bf63",   "descriptor": "Technique for breaking down complex logic into step-by-step derivations in AI models",   "source": "user_query",   "chunk_preview": "",   "metadata": {     "...
+
+─── iter 6 ─────────────────────────────────────────────
+[memory.read]   8 hits
+[perception]    ✓ g:5a23e586 — Query the knowledge base for instructions on ReAct methodology vs standard Prompt Engineering
+[perception]    ○ g:a5a7cc8f — Compare and summarise the differences in how they instruct models for complex tasks
+[decision]      TOOL_CALL: search_knowledge({"k": "5", "query": "What are the key differences in how ReAct methodology and standard Prompt Engineering instruct mode)
+[action]        → {   "id": "mem:9d68bf63",   "descriptor": "Technique for breaking down complex logic into step-by-step derivations in AI models",   "source": "user_query",   "chunk_preview": "",   "metadata": {     "...
+
+─── iter 7 ─────────────────────────────────────────────
+[memory.read]   8 hits
+[perception]    ✓ g:5a23e586 — Query the knowledge base for instructions on ReAct methodology vs standard Prompt Engineering
+[perception]    ○ g:a5a7cc8f — Compare and summarise the differences in how they instruct models for complex tasks
+[decision]      TOOL_CALL: search_knowledge({"k": "5", "query": "What are the key differences in how ReAct methodology and standard Prompt Engineering instruct mode)
+[action]        → {   "id": "mem:9d68bf63",   "descriptor": "Technique for breaking down complex logic into step-by-step derivations in AI models",   "source": "user_query",   "chunk_preview": "",   "metadata": {     "...
+
+─── iter 8 ─────────────────────────────────────────────
+[memory.read]   8 hits
+[perception]    ✓ g:5a23e586 — Query the knowledge base for instructions on ReAct methodology vs standard Prompt Engineering
+[perception]    ○ g:a5a7cc8f — Compare and summarise the differences in how they instruct models for complex tasks
+[decision]      TOOL_CALL: search_knowledge({"k": "5", "query": "What are the key differences in how ReAct methodology and standard Prompt Engineering instruct mode)
+[action]        → {   "id": "mem:9d68bf63",   "descriptor": "Technique for breaking down complex logic into step-by-step derivations in AI models",   "source": "user_query",   "chunk_preview": "",   "metadata": {     "...
+
+─── iter 9 ─────────────────────────────────────────────
+[memory.read]   8 hits
+[perception]    ✓ g:5a23e586 — Query the knowledge base for instructions on ReAct methodology vs standard Prompt Engineering
+[perception]    ○ g:a5a7cc8f — Compare and summarise the differences in how they instruct models for complex tasks
+[decision]      TOOL_CALL: search_knowledge({"k": "5", "query": "What are the key differences in how ReAct methodology and standard Prompt Engineering instruct mode)
+[action]        → {   "id": "mem:9d68bf63",   "descriptor": "Technique for breaking down complex logic into step-by-step derivations in AI models",   "source": "user_query",   "chunk_preview": "",   "metadata": {     "...
+
+─── iter 10 ─────────────────────────────────────────────
+[memory.read]   8 hits
+[perception]    ✓ g:5a23e586 — Query the knowledge base for instructions on ReAct methodology vs standard Prompt Engineering
+[perception]    ○ g:a5a7cc8f — Compare and summarise the differences in how they instruct models for complex tasks
+[decision]      TOOL_CALL: search_knowledge({"k": "5", "query": "What are the key differences in how ReAct methodology and standard Prompt Engineering instruct mode)
+[action]        → {   "id": "mem:9d68bf63",   "descriptor": "Technique for breaking down complex logic into step-by-step derivations in AI models",   "source": "user_query",   "chunk_preview": "",   "metadata": {     "...
+
+─── iter 11 ─────────────────────────────────────────────
+[memory.read]   8 hits
+[perception]    ✓ g:5a23e586 — Query the knowledge base for instructions on ReAct methodology vs standard Prompt Engineering
+[perception]    ○ g:a5a7cc8f — Compare and summarise the differences in how they instruct models for complex tasks
+[decision]      ANSWER: The primary difference between ReAct (Reason + Act) methodology and standard Prompt Engineering lies in how they manage the model's cognitive process and interaction with external environments.
+
+*   *...
+
+─── iter 12 ─────────────────────────────────────────────
+[memory.read]   8 hits
+[perception]    ✓ g:5a23e586 — Query the knowledge base for instructions on ReAct methodology vs standard Prompt Engineering
+[perception]    ✓ g:a5a7cc8f — Compare and summarise the differences in how they instruct models for complex tasks
+
+[done] all 2 goals satisfied
+
+══════════════════════════════════════════════════════════════════════════════
+FINAL: The primary difference between ReAct (Reason + Act) methodology and standard Prompt Engineering lies in how they manage the model's cognitive process and interaction with external environments.
+
+*   **Standard Prompt Engineering** typically relies on static instructions or few-shot examples to guide the model toward a desired output. It often focuses on the "what" (the final answer) or uses techniques like Chain-of-Thought (CoT) to encourage internal reasoning, but the model remains largely isolated from external tools or real-time feedback during the generation process.
+*   **ReAct Methodology** explicitly instructs the model to interleave reasoning traces with action steps. It forces the model to break down complex tasks into a sequence of "Thought," "Action," and "Observation" cycles. By generating a thought, performing an action (such as a search or API call), and then incorporating the observation from that action into its next thought, the model can dynamically adjust its strategy, correct errors, and gather necessary information that was not present in its initial training data.
+
+In summary, while standard prompt engineering focuses on refining the model's internal logic or output format, ReAct transforms the model into an agent that actively probes its environment to solve complex, multi-step problems.
+══════════════════════════════════════════════════════════════════════════════
+

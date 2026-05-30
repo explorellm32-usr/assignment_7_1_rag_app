@@ -1,0 +1,67 @@
+QUERY: Compare how the ReAct methodology and standard Prompt Engineering instruct the model differently when handling complex tasks.
+
+[05/30/26 12:05:02] INFO     Processing request of type            server.py:727
+                             ListToolsRequest                                   
+[05/30/26 12:05:46] INFO     Processing request of type            server.py:727
+                             CallToolRequest                                    
+[05/30/26 12:05:47] INFO     HTTP Request: GET                   _client.py:1025
+                             http://localhost:8107/v1/routers                   
+                             "HTTP/1.1 200 OK"                                  
+[05/30/26 12:05:53] INFO     HTTP Request: POST                  _client.py:1025
+                             http://localhost:8107/v1/embed                     
+                             "HTTP/1.1 200 OK"                                  
+[05/30/26 12:06:26] INFO     Processing request of type            server.py:727
+                             CallToolRequest                                    
+                    INFO     HTTP Request: GET                   _client.py:1025
+                             http://localhost:8107/v1/routers                   
+                             "HTTP/1.1 200 OK"                                  
+[05/30/26 12:06:28] INFO     HTTP Request: POST                  _client.py:1025
+                             http://localhost:8107/v1/embed                     
+                             "HTTP/1.1 200 OK"                                  
+
+══════════════════════════════════════════════════════════════════════════════
+run 22cf940a  ─  query: Compare how the ReAct methodology and standard Prompt Engineering instruct the model differently when handling complex tasks.
+══════════════════════════════════════════════════════════════════════════════
+[mcp] loaded 11 tools: ['web_search', 'fetch_url', 'get_time', 'currency_convert', 'read_file', 'list_dir', 'create_file', 'update_file', 'edit_file', 'index_document', 'search_knowledge']
+
+─── iter 1 ─────────────────────────────────────────────
+[memory.read]   8 hits
+[perception]    ○ g:9cfac672 — Query the existing knowledge base for ReAct and standard prompting differences
+[perception]    ○ g:7f368123 — Compare and summarise the differences between ReAct and standard prompt engineering
+[decision]      TOOL_CALL: search_knowledge({"k": "5", "query": "standard prompting differences"})
+[action]        → {   "id": "mem:8cf2cfe8",   "descriptor": "Three main differences between self-attention and recurrent layers in the Attention Is All You Need paper",   "source": "user_query",   "chunk_preview": "", ...
+
+─── iter 2 ─────────────────────────────────────────────
+[memory.read]   8 hits
+[perception]    ○ g:9cfac672 — Query the existing knowledge base for ReAct and standard prompting differences
+[perception]    ○ g:7f368123 — Compare and summarise the differences between ReAct and standard prompt engineering
+[decision]      TOOL_CALL: search_knowledge({"query": "ReAct and standard prompting differences", "k": "5"})
+[action]        → {   "id": "mem:0aa5f4f5",   "descriptor": "[sandbox:papers/react.md chunk 2/3] with a simple Wikipedia API, and generates human-like task-solving trajectories that are more interpretable than baselin"...
+
+─── iter 3 ─────────────────────────────────────────────
+[memory.read]   8 hits
+[perception]    ✓ g:9cfac672 — Query the existing knowledge base for ReAct and standard prompting differences
+[perception]    ○ g:7f368123 — Compare and summarise the differences between ReAct and standard prompt engineering
+[decision]      ANSWER: ReAct (Reason + Act) and standard prompt engineering represent fundamentally different approaches to how Large Language Models (LLMs) process tasks:
+
+*   **Standard Prompt Engineering:** Typically rel...
+
+─── iter 4 ─────────────────────────────────────────────
+[memory.read]   8 hits
+[perception]    ✓ g:9cfac672 — Query the existing knowledge base for ReAct and standard prompting differences
+[perception]    ✓ g:7f368123 — Compare and summarise the differences between ReAct and standard prompt engineering
+
+[done] all 2 goals satisfied
+
+══════════════════════════════════════════════════════════════════════════════
+FINAL: ReAct (Reason + Act) and standard prompt engineering represent fundamentally different approaches to how Large Language Models (LLMs) process tasks:
+
+*   **Standard Prompt Engineering:** Typically relies on the model's internal knowledge to generate a direct response to a prompt. While techniques like "Chain-of-Thought" encourage the model to articulate its reasoning steps, the process remains entirely internal and static. The model does not interact with the outside world or verify its information during the generation process.
+*   **ReAct:** Integrates reasoning with external action. Instead of relying solely on internal weights, a ReAct-enabled model generates "thought" traces alongside "action" steps (such as querying a Wikipedia API or searching a database). This allows the model to retrieve up-to-date information, correct its own misconceptions, and ground its reasoning in external facts.
+
+**Key Differences:**
+1.  **Information Source:** Standard prompting is limited to the model's training data, whereas ReAct can dynamically fetch external information to solve tasks.
+2.  **Interactivity:** ReAct creates a feedback loop where the model's actions influence its subsequent reasoning, making it more robust for complex, multi-step tasks.
+3.  **Interpretability:** Because ReAct explicitly separates "thought" from "action," the resulting task-solving trajectories are often more transparent and easier for humans to audit compared to the "black box" output of standard prompting.
+══════════════════════════════════════════════════════════════════════════════
+

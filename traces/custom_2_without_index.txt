@@ -1,0 +1,108 @@
+QUERY: Explain how the architecture detailed in the 2017 Google brain paper handles input tokens without using sequential processing.
+
+[05/30/26 12:17:19] INFO     Processing request of type            server.py:727
+                             ListToolsRequest                                   
+[05/30/26 12:17:27] INFO     Processing request of type            server.py:727
+                             CallToolRequest                                    
+                    INFO     HTTP Request: GET                   _client.py:1025
+                             http://localhost:8107/v1/routers                   
+                             "HTTP/1.1 200 OK"                                  
+                    INFO     HTTP Request: POST                  _client.py:1025
+                             http://localhost:8107/v1/embed                     
+                             "HTTP/1.1 200 OK"                                  
+[05/30/26 12:17:57] INFO     Processing request of type            server.py:727
+                             CallToolRequest                                    
+                    INFO     HTTP Request: GET                   _client.py:1025
+                             http://localhost:8107/v1/routers                   
+                             "HTTP/1.1 200 OK"                                  
+[05/30/26 12:17:58] INFO     HTTP Request: POST                  _client.py:1025
+                             http://localhost:8107/v1/embed                     
+                             "HTTP/1.1 200 OK"                                  
+[05/30/26 12:18:21] INFO     Processing request of type            server.py:727
+                             CallToolRequest                                    
+                    INFO     HTTP Request: GET                   _client.py:1025
+                             http://localhost:8107/v1/routers                   
+                             "HTTP/1.1 200 OK"                                  
+[05/30/26 12:18:22] INFO     HTTP Request: POST                  _client.py:1025
+                             http://localhost:8107/v1/embed                     
+                             "HTTP/1.1 200 OK"                                  
+[05/30/26 12:18:42] INFO     Processing request of type            server.py:727
+                             CallToolRequest                                    
+                    INFO     HTTP Request: GET                   _client.py:1025
+                             http://localhost:8107/v1/routers                   
+                             "HTTP/1.1 200 OK"                                  
+[05/30/26 12:18:44] INFO     HTTP Request: POST                  _client.py:1025
+                             http://localhost:8107/v1/embed                     
+                             "HTTP/1.1 200 OK"                                  
+[05/30/26 12:19:10] INFO     Processing request of type            server.py:727
+                             CallToolRequest                                    
+                    INFO     HTTP Request: GET                   _client.py:1025
+                             http://localhost:8107/v1/routers                   
+                             "HTTP/1.1 200 OK"                                  
+[05/30/26 12:19:12] INFO     HTTP Request: POST                  _client.py:1025
+                             http://localhost:8107/v1/embed                     
+                             "HTTP/1.1 200 OK"                                  
+
+══════════════════════════════════════════════════════════════════════════════
+run a7f2e4c0  ─  query: Explain how the architecture detailed in the 2017 Google brain paper handles input tokens without using sequential processing.
+══════════════════════════════════════════════════════════════════════════════
+[mcp] loaded 11 tools: ['web_search', 'fetch_url', 'get_time', 'currency_convert', 'read_file', 'list_dir', 'create_file', 'update_file', 'edit_file', 'index_document', 'search_knowledge']
+
+─── iter 1 ─────────────────────────────────────────────
+[memory.read]   8 hits
+[perception]    ○ g:a9c4ac0e — Query the existing knowledge base regarding the non-sequential input token processing in the 2017 Google Brain paper.
+[perception]    ○ g:eb622900 — Synthesise an explanation of how the architecture handles input tokens without sequential processing.
+[decision]      TOOL_CALL: search_knowledge({"query": "how the 2017 Google Brain paper handles input tokens without sequential processing"})
+[action]        → {   "id": "mem:3f0d3b2d",   "descriptor": "Architecture of the 2017 Google Brain paper regarding non-sequential token processing",   "source": "user_query",   "chunk_preview": "",   "metadata": {     ...
+
+─── iter 2 ─────────────────────────────────────────────
+[memory.read]   8 hits
+[perception]    ✓ g:a9c4ac0e — Query the existing knowledge base regarding the non-sequential input token processing in the 2017 Google Brain paper.
+[perception]    ○ g:eb622900 — Synthesise an explanation of how the architecture handles input tokens without sequential processing.
+[decision]      TOOL_CALL: search_knowledge({"k": "1", "query": "how the 2017 Google Brain paper handles input tokens without sequential processing"})
+[action]        → {   "id": "mem:3f0d3b2d",   "descriptor": "Architecture of the 2017 Google Brain paper regarding non-sequential token processing",   "source": "user_query",   "chunk_preview": "",   "metadata": {     ...
+
+─── iter 3 ─────────────────────────────────────────────
+[memory.read]   8 hits
+[perception]    ✓ g:a9c4ac0e — Query the existing knowledge base regarding the non-sequential input token processing in the 2017 Google Brain paper.
+[perception]    ○ g:eb622900 — Synthesise an explanation of how the architecture handles input tokens without sequential processing.
+[decision]      TOOL_CALL: search_knowledge({"k": "1", "query": "how the 2017 Google Brain paper handles input tokens without sequential processing"})
+[action]        → {   "id": "mem:3f0d3b2d",   "descriptor": "Architecture of the 2017 Google Brain paper regarding non-sequential token processing",   "source": "user_query",   "chunk_preview": "",   "metadata": {     ...
+
+─── iter 4 ─────────────────────────────────────────────
+[memory.read]   8 hits
+[perception]    ✓ g:a9c4ac0e — Query the existing knowledge base regarding the non-sequential input token processing in the 2017 Google Brain paper.
+[perception]    ○ g:eb622900 — Synthesise an explanation of how the architecture handles input tokens without sequential processing.
+[decision]      TOOL_CALL: search_knowledge({"k": "1", "query": "the identified differences"})
+[action]        → {   "id": "mem:9cf0d8bc",   "descriptor": "Three main differences between self-attention and recurrent layers in the Attention Is All You Need paper",   "source": "user_query",   "chunk_preview": "", ...
+
+─── iter 5 ─────────────────────────────────────────────
+[memory.read]   8 hits
+[perception]    ✓ g:a9c4ac0e — Query the existing knowledge base regarding the non-sequential input token processing in the 2017 Google Brain paper.
+[perception]    ○ g:eb622900 — Synthesise an explanation of how the architecture handles input tokens without sequential processing.
+[decision]      TOOL_CALL: search_knowledge({"k": "1", "query": "the identified differences"})
+[action]        → {   "id": "mem:9cf0d8bc",   "descriptor": "Three main differences between self-attention and recurrent layers in the Attention Is All You Need paper",   "source": "user_query",   "chunk_preview": "", ...
+
+─── iter 6 ─────────────────────────────────────────────
+[memory.read]   8 hits
+[perception]    ✓ g:a9c4ac0e — Query the existing knowledge base regarding the non-sequential input token processing in the 2017 Google Brain paper.
+[perception]    ○ g:eb622900 — Synthesise an explanation of how the architecture handles input tokens without sequential processing.
+[decision]      ANSWER: The architecture introduced in the 2017 "Attention Is All You Need" paper (the Transformer) replaces sequential processing—characteristic of Recurrent Neural Networks (RNNs)—with a self-attention mech...
+
+─── iter 7 ─────────────────────────────────────────────
+[memory.read]   8 hits
+[perception]    ✓ g:a9c4ac0e — Query the existing knowledge base regarding the non-sequential input token processing in the 2017 Google Brain paper.
+[perception]    ✓ g:eb622900 — Synthesise an explanation of how the architecture handles input tokens without sequential processing.
+
+[done] all 2 goals satisfied
+
+══════════════════════════════════════════════════════════════════════════════
+FINAL: The architecture introduced in the 2017 "Attention Is All You Need" paper (the Transformer) replaces sequential processing—characteristic of Recurrent Neural Networks (RNNs)—with a self-attention mechanism. This allows the model to process all input tokens in parallel rather than one by one.
+
+The key mechanisms enabling this non-sequential approach include:
+
+*   **Self-Attention Layers:** Unlike recurrent layers that must wait for the hidden state of the previous time step to process the current token, self-attention layers compute the representation of each token by attending to all other tokens in the sequence simultaneously. This creates direct paths between all positions in the input, regardless of their distance.
+*   **Positional Encodings:** Because the architecture processes the entire sequence at once and lacks an inherent sense of order, it injects "positional encodings" into the input embeddings. These encodings provide the model with information about the relative or absolute position of tokens in the sequence, compensating for the loss of sequential structure.
+*   **Parallelization:** By eliminating the dependency on previous time steps, the model can perform matrix multiplications across the entire sequence length at once. This significantly improves computational efficiency during training, as it allows for massive parallelization on hardware like GPUs, whereas RNNs are inherently constrained by their sequential nature.
+══════════════════════════════════════════════════════════════════════════════
+

@@ -1,0 +1,37 @@
+QUERY: Based on the indexed documents, which technique allows models to break down complex logic into step-by-step derivations before arriving at the final answer?
+
+[05/30/26 12:03:46] INFO     Processing request of type            server.py:727
+                             ListToolsRequest                                   
+
+══════════════════════════════════════════════════════════════════════════════
+run bf80eed6  ─  query: Based on the indexed documents, which technique allows models to break down complex logic into step-by-step derivations before arriving at the final answer?
+══════════════════════════════════════════════════════════════════════════════
+[mcp] loaded 11 tools: ['web_search', 'fetch_url', 'get_time', 'currency_convert', 'read_file', 'list_dir', 'create_file', 'update_file', 'edit_file', 'index_document', 'search_knowledge']
+
+─── iter 1 ─────────────────────────────────────────────
+[memory.read]   8 hits
+[perception]    ○ g:3580aef4 — Query the existing knowledge base for details on Chain-of-Thought reasoning.
+[perception]    ○ g:66aff5a9 — Identify and describe the technique that allows models to break down complex logic into step-by-step derivations.
+[decision]      ANSWER: Chain-of-Thought (CoT) reasoning is a technique designed to improve the performance of large language models on complex tasks by encouraging them to generate intermediate reasoning steps. Instead of m...
+
+─── iter 2 ─────────────────────────────────────────────
+[memory.read]   8 hits
+[perception]    ✓ g:3580aef4 — Query the existing knowledge base for details on Chain-of-Thought reasoning.
+[perception]    ○ g:66aff5a9 — Identify and describe the technique that allows models to break down complex logic into step-by-step derivations.
+[decision]      ANSWER: The technique that allows models to break down complex logic into step-by-step derivations is known as **Chain-of-Thought (CoT) prompting** (or reasoning).
+
+Instead of forcing a model to jump directly...
+
+─── iter 3 ─────────────────────────────────────────────
+[memory.read]   8 hits
+[perception]    ✓ g:3580aef4 — Query the existing knowledge base for details on Chain-of-Thought reasoning.
+[perception]    ✓ g:66aff5a9 — Identify and describe the technique that allows models to break down complex logic into step-by-step derivations.
+
+[done] all 2 goals satisfied
+
+══════════════════════════════════════════════════════════════════════════════
+FINAL: The technique that allows models to break down complex logic into step-by-step derivations is known as **Chain-of-Thought (CoT) prompting** (or reasoning).
+
+Instead of forcing a model to jump directly from a prompt to a final answer, this approach encourages the model to generate a series of intermediate reasoning steps. By articulating these logical steps, the model can decompose multi-step problems into more manageable components, which significantly improves performance on tasks requiring arithmetic, commonsense reasoning, and symbolic manipulation. This process effectively creates a "chain" of thought that makes the model's internal logic more transparent and accurate before it arrives at the final conclusion.
+══════════════════════════════════════════════════════════════════════════════
+
